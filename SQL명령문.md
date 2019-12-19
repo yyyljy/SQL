@@ -10,6 +10,8 @@ alter user id identified by password;
 
 set linesize 300;
 
+set pagesize 200;
+
 create table customer(
 										id varchar2(10) primary key,
 										pass varchar2(10),
