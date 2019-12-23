@@ -91,3 +91,36 @@ desc 내림차순
 
 기본은 오름차순
 
+
+
+## 레코드 삭제
+
+delete 테이블명;	: 모든 레코드 삭제
+
+delete from 테이블명	: 모든 레코드 삭제
+
+```sql
+SQL> update member
+  2  set addr=(select addr
+  3             from member
+  4             where id ='jang')
+  5  where id ='lee';
+
+1 row updated.
+
+SQL> delete
+  2  from member
+  3  where addr = (select addr
+  4                     from member
+  5                     where id = 'jang');
+```
+
+
+
+
+
+## 컬럼 데이터타입,크기 변경
+
+alter table 테이블명
+
+modify(컬럼명 데이터타입);
